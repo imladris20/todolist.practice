@@ -16,7 +16,7 @@ function createListElement() {
     let newSpan = document.createElement("span");
     let newListButton = document.createElement("button");
 
-    // ·s¥[¤Jªº¤¸¯À­n°O±o¥[¤JEventListener¡A¤£µM¹ï¥¦°Ê§@·|¨S¤ÏÀ³¡C 
+    // æ–°åŠ å…¥çš„å…ƒç´ è¦è¨˜å¾—åŠ å…¥EventListenerï¼Œä¸ç„¶å°å®ƒå‹•ä½œæœƒæ²’åæ‡‰ã€‚ 
     newSpan.appendChild(document.createTextNode(input.value));
     newSpan.addEventListener("click", checkList);
 
@@ -45,7 +45,7 @@ function addListAfterEnter(event) {
 }
 
 function checkList(event) {
-    // ­n¥Îevent.target ¤~ª¾¹D¬O­n°w¹ï³Q¶Ç¤Jªºevent©Ò«ü¤¸¯À°µ°Ê§@
+    // è¦ç”¨event.target æ‰çŸ¥é“æ˜¯è¦é‡å°è¢«å‚³å…¥çš„eventæ‰€æŒ‡å…ƒç´ åšå‹•ä½œ
     event.target.classList.toggle("done");
 }
 
@@ -58,7 +58,7 @@ button.addEventListener("click", addListAfterClick);
 input.addEventListener("keypress", addListAfterEnter);
 
 /*  Mission 1: If you click on the list item, it toggles the .done  class on and off.
-  ¦]¬°listElement¬O¤@­Ó°}¦C¡A©Ò¥H­n¥ÎforEach    */
+  å› ç‚ºlistElementæ˜¯ä¸€å€‹é™£åˆ—ï¼Œæ‰€ä»¥è¦ç”¨forEach    */
 listElement.forEach( function (element){
     element.addEventListener("click", checkList);
 });
